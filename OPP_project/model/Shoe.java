@@ -1,83 +1,66 @@
-package OPP_project.model;
+package model;
 
-public abstract class Shoe {
-    private String shoeId;
+import java.io.Serializable;
+
+public class Shoe implements Serializable {
+    private String id;
     private String name;
+    private String type;
     private String brand;
     private int size;
     private double price;
-    private int quantity;
-    private String category;
 
-    public Shoe() {
-    }
-
-    public Shoe(String shoeId, String name, String brand, int size,
-            double price, int quantity, String category) {
-        this.shoeId = shoeId;
+    public Shoe(String id, String name, String type, String brand, int size, double price) {
+        this.id = id;
         this.name = name;
+        this.type = type;
         this.brand = brand;
         this.size = size;
         this.price = price;
-        this.quantity = quantity;
-        this.category = category;
     }
 
-    public abstract String getType();
-
-    public String getShoeId() {
-        return shoeId;
-    }
-
-    public void setShoeId(String shoeId) {
-        this.shoeId = shoeId;
+    // Getter và Setter
+    public String getId() {
+        return id;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getType() {
+        return type;
     }
 
     public String getBrand() {
         return brand;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
     public int getSize() {
         return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
     }
 
     public double getPrice() {
         return price;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
     public void setPrice(double price) {
         this.price = price;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
     }
 }

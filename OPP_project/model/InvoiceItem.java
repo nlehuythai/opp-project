@@ -1,11 +1,10 @@
-package OPP_project.model;
+package model;
 
-public class InvoiceItem {
+import java.io.Serializable;
+
+public class InvoiceItem implements Serializable {
     private Shoe shoe;
     private int quantity;
-
-    public InvoiceItem() {
-    }
 
     public InvoiceItem(Shoe shoe, int quantity) {
         this.shoe = shoe;
@@ -16,20 +15,11 @@ public class InvoiceItem {
         return shoe.getPrice() * quantity;
     }
 
-    // GETTER – SETTER
     public Shoe getShoe() {
         return shoe;
     }
 
-    public void setShoe(Shoe shoe) {
-        this.shoe = shoe;
-    }
-
     public int getQuantity() {
         return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
     }
 }
